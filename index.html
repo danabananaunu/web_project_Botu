@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
+        <div id="animation" class="animation-container"></div>
+        <h1 class="mb-4">Weather App</h1>
+        <form id="cityForm" class="city-form mb-3 text-center">
+            <label for="city">Enter your city</label>
+            <input id="city" type="text" class="form-control" placeholder="Lahti, Helsinki..." required />
+            <button class="btn btn-search mt-2">Search</button>
+        </form> 
+        <div class="separator mb-2">
+            <span class="separator-text">or</span>
+        </div>
+        <button id="locationBtn" class="btn btn-location">Use current location</button>
+        <button id="theme">🌙</button>
+        <div class="unit-selector mb-3">
+            <label for="unit"></label>
+            <select id="unit" class="form-control">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+        </div>
+        <div class="graph-container">
+            <canvas id="temperatureGraph"></canvas>
+        </div>        
+        <div class="page-content mt-4"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
